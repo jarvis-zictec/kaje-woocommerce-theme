@@ -27,7 +27,7 @@
         </nav>
         <div class="header-actions">
             <a class="header-link" href="https://www.kajeservicos.com.br/">Site institucional</a>
-            <a class="btn btn-primary" href="<?php echo esc_url( kaje_loja_cart_url() ); ?>">Carrinho</a>
+            <a class="btn btn-primary" href="<?php echo esc_url( kaje_loja_cart_url() ); ?>">Ver carrinho</a>
         </div>
     </div>
 </header>

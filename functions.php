@@ -40,6 +40,8 @@ add_filter( 'woocommerce_breadcrumb_defaults', function ( $defaults ) {
 
 add_filter( 'woocommerce_product_add_to_cart_text', function () { return __( 'Contratar serviço', 'kaje-loja' ); } );
 add_filter( 'woocommerce_product_single_add_to_cart_text', function () { return __( 'Contratar agora', 'kaje-loja' ); } );
+add_filter( 'private_title_format', function () { return '%s'; } );
+add_filter( 'protected_title_format', function () { return '%s'; } );
 
 add_filter( 'woocommerce_checkout_fields', function ( $fields ) {
     if ( isset( $fields['billing']['billing_company'] ) ) {
@@ -58,7 +60,7 @@ add_action( 'woocommerce_before_shop_loop', function () {
 }, 5 );
 
 function kaje_loja_whatsapp_url() {
-    return 'https://wa.me/5547999999999?text=' . rawurlencode( 'Olá, vim pela Loja KAJE e gostaria de atendimento.' );
+    return 'https://wa.me/5547988090296?text=' . rawurlencode( 'Olá, vim pela Loja KAJE e gostaria de atendimento.' );
 }
 
 function kaje_loja_calendly_url() {
@@ -78,5 +80,17 @@ function kaje_loja_checkout_url() {
 }
 
 function kaje_loja_default_menu() {
-    echo '<ul class="menu"><li><a href="' . esc_url( kaje_loja_shop_url() ) . '">Serviços</a></li><li><a href="' . esc_url( kaje_loja_cart_url() ) . '">Carrinho</a></li><li><a href="' . esc_url( kaje_loja_checkout_url() ) . '">Finalizar compra</a></li><li><a href="' . esc_url( kaje_loja_calendly_url() ) . '" target="_blank" rel="noopener">Agendamento</a></li></ul>';
+    echo '<ul class="menu"><li><a href="' . esc_url( kaje_loja_shop_url() ) . '">Serviços</a></li><li><a href="' . esc_url( kaje_loja_calendly_url() ) . '" target="_blank" rel="noopener">Agendamento</a></li><li><a href="https://www.kajeservicos.com.br/">Site institucional</a></li><li><a href="' . esc_url( kaje_loja_cart_url() ) . '">Carrinho</a></li></ul>';
 }
+
+
+add_filter( 'woocommerce_page_title', function ( $title ) {
+    if ( function_exists( 'is_shop' ) && is_shop() ) {
+        return __( 'Serviços disponíveis', 'kaje-loja' );
+    }
+    return $title;
+} );
+
+add_action( 'woocommerce_before_shop_loop_item_title', function () {
+    echo '<div class="kaje-product-label">Serviço KAJE</div>';
+}, 8 );

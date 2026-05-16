@@ -30,4 +30,4 @@ chown -R nginx:nginx /var/www/kaje/wp-content/themes/kaje-loja
 
 - O tema pressupõe WooCommerce ativo no site da loja.
 - O tema institucional `KAJE Serviços` deve continuar no `www.kajeservicos.com.br`.
-- O WhatsApp em `functions.php` está com número placeholder e pode ser ajustado depois.
+- WhatsApp principal da KAJE no tema: `(47) 98809-0296`.

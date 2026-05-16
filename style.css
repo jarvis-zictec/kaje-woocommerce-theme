@@ -130,3 +130,42 @@ table.shop_table td, table.shop_table th { padding: 14px !important; border-colo
   .woocommerce ul.products, .trust-grid { grid-template-columns: 1fr; }
   .woocommerce div.product { padding: 18px; }
 }
+
+
+/* Refinamento KAJE: loja como catálogo de serviços, sem depender de imagens de produto. */
+.woocommerce ul.products li.product img {
+  display: none;
+}
+.woocommerce ul.products li.product .kaje-product-label {
+  display: inline-flex;
+  width: max-content;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(201,150,74,.12);
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.woocommerce ul.products li.product a {
+  text-decoration: none;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  text-decoration: none;
+}
+.woocommerce ul.products li.product.product-status-private .woocommerce-loop-product__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  color: var(--text);
+}
+.woocommerce ul.products li.product .price {
+  text-decoration: none;
+}
+.page-hero.compact + .content-section {
+  padding-top: 34px;
+}
+.kaje-shop-note {
+  margin-bottom: 22px;
+  font-size: 18px;
+}
