@@ -14,7 +14,7 @@
         <div>
             <h2>Compra segura</h2>
             <p>Todos os serviços são revisados antes da execução. Taxas públicas, multas, juros e débitos não estão inclusos salvo indicação expressa.</p>
-            <p><a href="<?php echo esc_url( home_url( '/termos-de-uso/' ) ); ?>">Termos de uso e contratação</a></p>
+            <p><a href="<?php echo esc_url( home_url( '/termos-de-uso/' ) ); ?>">Termos de uso e contratação</a><br><a href="<?php echo esc_url( home_url( '/politica-de-privacidade/' ) ); ?>">Política de privacidade</a></p>
         </div>
     </div>
     <div class="container footer-bottom">© <?php echo esc_html( date( 'Y' ) ); ?> KAJE Serviços. Loja operada em WordPress + WooCommerce.</div>
