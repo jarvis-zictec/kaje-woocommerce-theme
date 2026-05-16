@@ -31,3 +31,42 @@ chown -R nginx:nginx /var/www/kaje/wp-content/themes/kaje-loja
 - O tema pressupõe WooCommerce ativo no site da loja.
 - O tema institucional `KAJE Serviços` deve continuar no `www.kajeservicos.com.br`.
 - WhatsApp principal da KAJE no tema: `(47) 98809-0296`.
+
+
+## Imagens de produtos
+
+As imagens vetoriais dos 12 serviços ficam em:
+
+```text
+assets/product-images/
+```
+
+Arquivos de controle:
+
+```text
+assets/product-images/manifest.csv
+assets/product-images/manifest.json
+scripts/generate-product-images.py
+scripts/assign-product-images.sh
+```
+
+Para associar as imagens aos produtos existentes no WooCommerce via SKU:
+
+```bash
+cd /var/www/kaje/wp-content/themes/kaje-loja
+./scripts/assign-product-images.sh
+```
+
+O script usa por padrão:
+
+```text
+WP_ROOT=/var/www/kaje
+SHOP_URL=https://loja.kajeservicos.com.br
+THEME_DIR=/var/www/kaje/wp-content/themes/kaje-loja
+```
+
+Se necessário, sobrescrever:
+
+```bash
+WP_ROOT=/var/www/kaje SHOP_URL=https://loja.kajeservicos.com.br ./scripts/assign-product-images.sh
+```

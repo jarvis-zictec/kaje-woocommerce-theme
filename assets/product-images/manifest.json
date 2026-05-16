@@ -1,0 +1,86 @@
+[
+  {
+    "sku": "KAJE-MEI-DASN",
+    "slug": "declaracao-anual-mei-dasn-simei",
+    "title": "Declaração Anual do MEI — DASN-SIMEI",
+    "image_file": "assets/product-images/kaje-mei-dasn.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-MEI-DASN-ATRASO",
+    "slug": "declaracao-anual-mei-pendencia-atraso",
+    "title": "Declaração Anual MEI com Pendência ou Atraso",
+    "image_file": "assets/product-images/kaje-mei-dasn-atraso.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-MEI-ABERTURA",
+    "slug": "abertura-formalizacao-mei",
+    "title": "Abertura e Formalização de MEI",
+    "image_file": "assets/product-images/kaje-mei-abertura.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-MEI-ALTERACAO",
+    "slug": "alteracao-cadastral-mei",
+    "title": "Alteração Cadastral do MEI",
+    "image_file": "assets/product-images/kaje-mei-alteracao.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-MEI-REGULARIZACAO",
+    "slug": "regularizacao-cadastral-pendencias-mei",
+    "title": "Regularização Cadastral e Pendências do MEI",
+    "image_file": "assets/product-images/kaje-mei-regularizacao.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-NFSE-AVULSA",
+    "slug": "apoio-emissao-nfse-avulsa",
+    "title": "Apoio para Emissão de NFS-e Avulsa",
+    "image_file": "assets/product-images/kaje-nfse-avulsa.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-NFSE-PACOTE10",
+    "slug": "pacote-apoio-10-nfse",
+    "title": "Pacote de Apoio para até 10 NFS-e",
+    "image_file": "assets/product-images/kaje-nfse-pacote10.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-TRIBUTOS-DIAGNOSTICO",
+    "slug": "diagnostico-pendencias-tributarias",
+    "title": "Diagnóstico de Pendências Tributárias",
+    "image_file": "assets/product-images/kaje-tributos-diagnostico.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-TRIBUTOS-PARCELAMENTO",
+    "slug": "regularizacao-parcelamento-tributario",
+    "title": "Apoio em Regularização ou Parcelamento Tributário",
+    "image_file": "assets/product-images/kaje-tributos-parcelamento.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-ANTT-CADASTRO",
+    "slug": "cadastro-antt-apoio-orientacao",
+    "title": "Cadastro ANTT — Apoio e Orientação",
+    "image_file": "assets/product-images/kaje-antt-cadastro.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-CONSULTA-ONLINE",
+    "slug": "atendimento-consultivo-online-30-min",
+    "title": "Atendimento Consultivo Online — 30 minutos",
+    "image_file": "assets/product-images/kaje-consulta-online.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-CONSULTA-PRESENCIAL",
+    "slug": "atendimento-presencial-agendamento-timbo",
+    "title": "Atendimento Presencial com Agendamento — Timbó/SC",
+    "image_file": "assets/product-images/kaje-consulta-presencial.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  }
+]
