@@ -86,7 +86,7 @@ function kaje_loja_default_menu() {
 
 add_filter( 'woocommerce_page_title', function ( $title ) {
     if ( function_exists( 'is_shop' ) && is_shop() ) {
-        return __( 'Serviços disponíveis', 'kaje-loja' );
+        return __( 'Escolha o serviço', 'kaje-loja' );
     }
     return $title;
 } );

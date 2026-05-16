@@ -2,7 +2,11 @@
 <section class="page-hero compact">
     <div class="container">
         <span class="eyebrow">Loja KAJE Serviços</span>
-        <h1><?php function_exists( 'woocommerce_page_title' ) ? woocommerce_page_title() : the_title(); ?></h1>
+        <?php if ( function_exists( 'is_shop' ) && is_shop() ) : ?>
+            <h1>Contrate serviços KAJE online</h1>
+        <?php else : ?>
+            <h1><?php function_exists( 'woocommerce_page_title' ) ? woocommerce_page_title() : the_title(); ?></h1>
+        <?php endif; ?>
         <p>Contratação online para serviços administrativos e consultivos, com confirmação humana de dados, documentos e escopo antes da execução.</p>
     </div>
 </section>
