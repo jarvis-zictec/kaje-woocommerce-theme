@@ -35,7 +35,7 @@ chown -R nginx:nginx /var/www/kaje/wp-content/themes/kaje-loja
 
 ## Imagens de produtos
 
-As imagens vetoriais dos 12 serviços ficam em:
+As imagens vetoriais dos serviços ficam em:
 
 ```text
 assets/product-images/
@@ -50,7 +50,7 @@ scripts/generate-product-images.py
 scripts/assign-product-images.sh
 ```
 
-Para associar as imagens aos produtos existentes no WooCommerce via SKU:
+Para associar ou atualizar as imagens dos produtos existentes no WooCommerce via SKU:
 
 ```bash
 cd /var/www/kaje/wp-content/themes/kaje-loja

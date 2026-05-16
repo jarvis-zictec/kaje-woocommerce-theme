@@ -17,6 +17,10 @@ assign_image() {
     echo "Produto não encontrado para SKU $sku"
     return 0
   fi
+  if [ ! -f "$IMG_DIR/$file" ]; then
+    echo "Imagem não encontrada: $IMG_DIR/$file"
+    return 1
+  fi
   echo "Importando imagem para produto $product_id / $sku"
   attachment_id=$(wp --allow-root --url="$SHOP_URL" media import "$IMG_DIR/$file" --post_id="$product_id" --title="$title" --alt="$title" --porcelain)
   wp --allow-root --url="$SHOP_URL" post meta update "$product_id" _thumbnail_id "$attachment_id" >/dev/null
@@ -34,5 +38,7 @@ assign_image 'KAJE-TRIBUTOS-PARCELAMENTO' 'kaje-tributos-parcelamento.png' 'Apoi
 assign_image 'KAJE-ANTT-CADASTRO' 'kaje-antt-cadastro.png' 'Cadastro ANTT — Apoio e Orientação'
 assign_image 'KAJE-CONSULTA-ONLINE' 'kaje-consulta-online.png' 'Atendimento Consultivo Online — 30 minutos'
 assign_image 'KAJE-CONSULTA-PRESENCIAL' 'kaje-consulta-presencial.png' 'Atendimento Presencial com Agendamento — Timbó/SC'
+assign_image 'KAJE-LICITACAO-COMPRASBR-MEI' 'kaje-licitacao-comprasbr-mei.png' 'Cadastro no Compras BR para MEI'
+assign_image 'KAJE-LICITACAO-DOCUMENTOS' 'kaje-licitacao-documentos.png' 'Gestão de Documentos para Licitação'
 
 echo 'OK - imagens associadas aos produtos KAJE.'

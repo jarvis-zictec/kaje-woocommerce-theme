@@ -82,5 +82,19 @@
     "title": "Atendimento Presencial com Agendamento — Timbó/SC",
     "image_file": "assets/product-images/kaje-consulta-presencial.png",
     "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-LICITACAO-COMPRASBR-MEI",
+    "slug": "cadastro-compras-br-mei",
+    "title": "Cadastro no Compras BR para MEI",
+    "image_file": "assets/product-images/kaje-licitacao-comprasbr-mei.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
+  },
+  {
+    "sku": "KAJE-LICITACAO-DOCUMENTOS",
+    "slug": "gestao-documentos-licitacao",
+    "title": "Gestão de Documentos para Licitação",
+    "image_file": "assets/product-images/kaje-licitacao-documentos.png",
+    "prompt_style": "Ilustração vetorial quadrada KAJE: fundo creme, azul-marinho, dourado, acentos geométricos laranja/verde/vermelho, ícone sem foto realista."
   }
 ]

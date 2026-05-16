@@ -1,4 +1,4 @@
-PRODUCTS = [('KAJE-MEI-DASN', 'declaracao-anual-mei-dasn-simei', 'Declaração Anual do MEI — DASN-SIMEI', 'calendar'), ('KAJE-MEI-DASN-ATRASO', 'declaracao-anual-mei-pendencia-atraso', 'Declaração Anual MEI com Pendência ou Atraso', 'alert'), ('KAJE-MEI-ABERTURA', 'abertura-formalizacao-mei', 'Abertura e Formalização de MEI', 'store'), ('KAJE-MEI-ALTERACAO', 'alteracao-cadastral-mei', 'Alteração Cadastral do MEI', 'edit'), ('KAJE-MEI-REGULARIZACAO', 'regularizacao-cadastral-pendencias-mei', 'Regularização Cadastral e Pendências do MEI', 'shield'), ('KAJE-NFSE-AVULSA', 'apoio-emissao-nfse-avulsa', 'Apoio para Emissão de NFS-e Avulsa', 'invoice'), ('KAJE-NFSE-PACOTE10', 'pacote-apoio-10-nfse', 'Pacote de Apoio para até 10 NFS-e', 'stack'), ('KAJE-TRIBUTOS-DIAGNOSTICO', 'diagnostico-pendencias-tributarias', 'Diagnóstico de Pendências Tributárias', 'magnify'), ('KAJE-TRIBUTOS-PARCELAMENTO', 'regularizacao-parcelamento-tributario', 'Apoio em Regularização ou Parcelamento Tributário', 'chart'), ('KAJE-ANTT-CADASTRO', 'cadastro-antt-apoio-orientacao', 'Cadastro ANTT — Apoio e Orientação', 'truck'), ('KAJE-CONSULTA-ONLINE', 'atendimento-consultivo-online-30-min', 'Atendimento Consultivo Online — 30 minutos', 'video'), ('KAJE-CONSULTA-PRESENCIAL', 'atendimento-presencial-agendamento-timbo', 'Atendimento Presencial com Agendamento — Timbó/SC', 'pin')]
+PRODUCTS = [('KAJE-MEI-DASN', 'declaracao-anual-mei-dasn-simei', 'Declaração Anual do MEI — DASN-SIMEI', 'calendar'), ('KAJE-MEI-DASN-ATRASO', 'declaracao-anual-mei-pendencia-atraso', 'Declaração Anual MEI com Pendência ou Atraso', 'alert'), ('KAJE-MEI-ABERTURA', 'abertura-formalizacao-mei', 'Abertura e Formalização de MEI', 'store'), ('KAJE-MEI-ALTERACAO', 'alteracao-cadastral-mei', 'Alteração Cadastral do MEI', 'edit'), ('KAJE-MEI-REGULARIZACAO', 'regularizacao-cadastral-pendencias-mei', 'Regularização Cadastral e Pendências do MEI', 'shield'), ('KAJE-NFSE-AVULSA', 'apoio-emissao-nfse-avulsa', 'Apoio para Emissão de NFS-e Avulsa', 'invoice'), ('KAJE-NFSE-PACOTE10', 'pacote-apoio-10-nfse', 'Pacote de Apoio para até 10 NFS-e', 'stack'), ('KAJE-TRIBUTOS-DIAGNOSTICO', 'diagnostico-pendencias-tributarias', 'Diagnóstico de Pendências Tributárias', 'magnify'), ('KAJE-TRIBUTOS-PARCELAMENTO', 'regularizacao-parcelamento-tributario', 'Apoio em Regularização ou Parcelamento Tributário', 'chart'), ('KAJE-ANTT-CADASTRO', 'cadastro-antt-apoio-orientacao', 'Cadastro ANTT — Apoio e Orientação', 'truck'), ('KAJE-CONSULTA-ONLINE', 'atendimento-consultivo-online-30-min', 'Atendimento Consultivo Online — 30 minutos', 'video'), ('KAJE-CONSULTA-PRESENCIAL', 'atendimento-presencial-agendamento-timbo', 'Atendimento Presencial com Agendamento — Timbó/SC', 'pin'), ('KAJE-LICITACAO-COMPRASBR-MEI', 'cadastro-compras-br-mei', 'Cadastro no Compras BR para MEI', 'portal'), ('KAJE-LICITACAO-DOCUMENTOS', 'gestao-documentos-licitacao', 'Gestão de Documentos para Licitação', 'folder')]
 OUT = '/root/agents/jarvis/kaje-woocommerce-theme/assets/product-images'
 
 from PIL import Image, ImageDraw, ImageFont
@@ -139,6 +139,30 @@ def video_icon(d):
     d.rounded_rectangle((450,575,620,600), radius=12, fill=COL['cream2'])
     rr(d,(395,760,805,825),32,COL['cream2'],COL['line'],3)
 
+
+def portal_icon(d):
+    rr(d,(280,300,920,780),42,COL['white'],COL['line'],4)
+    rr(d,(280,300,920,410),42,COL['navy'],None,1)
+    d.rectangle((280,365,920,410), fill=COL['navy'])
+    for x,c in [(340,COL['red']),(395,COL['gold']),(450,COL['green'])]: d.ellipse((x,340,x+28,y:=368), fill=c)
+    rr(d,(360,475,590,650),26,(241,235,222),COL['line'],2)
+    rr(d,(625,475,840,530),18,(231,240,231),None,1)
+    rr(d,(625,570,840,625),18,(242,232,211),None,1)
+    line(d,[(425,560),(475,610),(545,510)],COL['green'],16)
+    d.ellipse((690,665,850,825), fill=COL['gold'])
+    d.rectangle((760,555,785,705), fill=COL['navy'])
+    d.rectangle((695,735,855,760), fill=COL['navy'])
+
+def folder_icon(d):
+    rr(d,(260,420,940,805),36,COL['gold2'],COL['line'],4)
+    d.polygon([(300,360),(535,360),(590,425),(300,425)], fill=COL['gold'], outline=COL['line'])
+    rr(d,(295,455,905,835),36,COL['white'],COL['line'],4)
+    document(d,380,300,360,445,(255,252,245))
+    line(d,[(460,520),(525,585),(665,435)],COL['green'],18)
+    for y in [390,650,710]: d.rounded_rectangle((455,y,720,y+22), radius=10, fill=(226,219,205))
+    d.ellipse((700,645,870,815), fill=COL['navy'])
+    d.text((744,675),'OK',fill=COL['gold2'],font=FONT_BOLD)
+
 def pin_icon(d):
     d.ellipse((430,240,770,580), fill=COL['navy'])
     d.polygon([(500,520),(700,520),(600,870)], fill=COL['navy'])
@@ -147,7 +171,7 @@ def pin_icon(d):
     line(d,[(365,780),(835,780)],COL['gold'],12)
     for x,c in [(420,COL['green']),(600,COL['orange']),(780,COL['red'])]: d.ellipse((x,758,x+45,803), fill=c)
 
-icons={'calendar':calendar_icon,'alert':alert_icon,'store':store_icon,'edit':edit_icon,'shield':shield_icon,'invoice':invoice_icon,'stack':stack_icon,'magnify':magnify_icon,'chart':chart_icon,'truck':truck_icon,'video':video_icon,'pin':pin_icon}
+icons={'calendar':calendar_icon,'alert':alert_icon,'store':store_icon,'edit':edit_icon,'shield':shield_icon,'invoice':invoice_icon,'stack':stack_icon,'magnify':magnify_icon,'chart':chart_icon,'truck':truck_icon,'video':video_icon,'pin':pin_icon,'portal':portal_icon,'folder':folder_icon}
 products = PRODUCTS
 out=Path(OUT)
 out.mkdir(parents=True, exist_ok=True)
