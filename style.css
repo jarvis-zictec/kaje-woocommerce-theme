@@ -169,3 +169,20 @@ table.shop_table td, table.shop_table th { padding: 14px !important; border-colo
   margin-bottom: 22px;
   font-size: 18px;
 }
+
+
+/* Legal / terms content */
+.page-content .kaje-legal-content,
+.kaje-legal-content {
+    max-width: 920px;
+    margin: 0 auto;
+    color: var(--navy);
+    line-height: 1.75;
+}
+.kaje-legal-content h2 {
+    margin-top: 2rem;
+    margin-bottom: .75rem;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    color: var(--navy);
+}
+.kaje-legal-content p { margin-bottom: 1rem; }
