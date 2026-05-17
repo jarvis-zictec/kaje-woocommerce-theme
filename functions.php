@@ -150,6 +150,10 @@ add_filter( 'woocommerce_email_from_address', function () {
     return 'no-reply@kajeservicos.com.br';
 }, 20 );
 
+add_filter( 'woocommerce_email_header_image', function ( $image ) {
+    return kaje_loja_asset( 'assets/email/kaje-email-logo.png' );
+}, 20 );
+
 add_filter( 'woocommerce_email_footer_text', function () {
     return 'KAJE Serviços — empresa privada independente, sem vínculo com órgãos governamentais.<br>Serviços administrativos, consultivos e operacionais para simplificar a rotina do empreendedor.<br>Dúvidas? kerly@kajeservicos.com.br';
 }, 20 );
@@ -212,8 +216,9 @@ add_filter( 'woocommerce_email_styles', function ( $css ) {
         body { background-color: #f6f0e6 !important; }
         #wrapper { background-color: #f6f0e6 !important; padding: 34px 0 !important; }
         #template_container { border: 1px solid #eadfcf !important; border-radius: 22px !important; overflow: hidden !important; box-shadow: 0 18px 55px rgba(16,24,32,.10) !important; }
-        #template_header_image { background-color: #050505 !important; text-align: center !important; padding: 22px 0 18px !important; margin: 0 !important; border-radius: 22px 22px 0 0 !important; }
-        #template_header_image img { width: 210px !important; max-width: 210px !important; height: auto !important; margin: 0 auto !important; display: block !important; }
+        #template_header_image { background-color: #050505 !important; text-align: center !important; padding: 14px 0 12px !important; margin: 0 !important; border-radius: 22px 22px 0 0 !important; line-height: 0 !important; }
+        #template_header_image p { margin: 0 !important; padding: 0 !important; line-height: 0 !important; }
+        #template_header_image img { width: 320px !important; max-width: 82% !important; height: auto !important; margin: 0 auto !important; display: block !important; border: 0 !important; }
         #template_header { background-color: #101820 !important; border-bottom: 4px solid #c7a46a !important; border-radius: 0 !important; }
         #template_header h1 { color: #c7a46a !important; font-family: Helvetica, Arial, sans-serif !important; font-weight: 800 !important; letter-spacing: -0.02em !important; text-shadow: none !important; }
         #body_content_inner, #body_content_inner p, #body_content_inner td { color: #101820 !important; font-family: Helvetica, Arial, sans-serif !important; font-size: 15px !important; line-height: 1.65 !important; }
