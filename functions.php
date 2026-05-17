@@ -45,8 +45,11 @@ add_filter( 'protected_title_format', function () { return '%s'; } );
 
 add_filter( 'woocommerce_checkout_fields', function ( $fields ) {
     if ( isset( $fields['billing']['billing_company'] ) ) {
-        $fields['billing']['billing_company']['label'] = __( 'Empresa / CNPJ, se houver', 'kaje-loja' );
+        $fields['billing']['billing_company']['label'] = __( 'Razão social', 'kaje-loja' );
+        $fields['billing']['billing_company']['placeholder'] = __( 'Informe a razão social quando o pedido for para CNPJ.', 'kaje-loja' );
         $fields['billing']['billing_company']['required'] = false;
+        $fields['billing']['billing_company']['class'] = array_unique( array_merge( $fields['billing']['billing_company']['class'] ?? array(), array( 'form-row-wide', 'kaje-company-field' ) ) );
+        $fields['billing']['billing_company']['priority'] = $fields['billing']['billing_company']['priority'] ?? 25;
     }
     if ( isset( $fields['order']['order_comments'] ) ) {
         $fields['order']['order_comments']['label'] = __( 'Informações para atendimento', 'kaje-loja' );

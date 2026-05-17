@@ -340,7 +340,8 @@ body.woocommerce-checkout #order_review_heading::before {
 /* Campos: mantém a lógica nativa first/last do Woo, mas corrige wrappers inline. */
 body.woocommerce-checkout .woocommerce form .form-row,
 body.woocommerce-checkout .woocommerce-page form .form-row {
-  display: block !important;
+  /* Não forçar display aqui: o plugin Brazilian Market usa show/hide inline
+     nos campos CPF/CNPJ/RG/IE conforme o Tipo de Pessoa. */
   padding: 0 !important;
   margin: 0 0 18px !important;
   clear: none;
