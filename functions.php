@@ -219,8 +219,8 @@ add_filter( 'woocommerce_email_styles', function ( $css ) {
         #template_header_image { background-color: #050505 !important; text-align: center !important; padding: 14px 0 12px !important; margin: 0 !important; border-radius: 22px 22px 0 0 !important; line-height: 0 !important; }
         #template_header_image p { margin: 0 !important; padding: 0 !important; line-height: 0 !important; }
         #template_header_image img { width: 320px !important; max-width: 82% !important; height: auto !important; margin: 0 auto !important; display: block !important; border: 0 !important; }
-        #template_header { background-color: #c7a46a !important; border-bottom: 4px solid #101820 !important; border-radius: 0 !important; }
-        #template_header h1 { color: #101820 !important; font-family: Helvetica, Arial, sans-serif !important; font-weight: 800 !important; letter-spacing: -0.02em !important; text-shadow: none !important; }
+        #template_header, #template_header tr, #template_header td { background-color: #c7a46a !important; border-bottom: 4px solid #101820 !important; border-radius: 0 !important; overflow: hidden !important; }
+        #template_header h1 { color: #101820 !important; background-color: #c7a46a !important; border-radius: 0 !important; margin: 0 !important; font-family: Helvetica, Arial, sans-serif !important; font-weight: 800 !important; letter-spacing: -0.02em !important; text-shadow: none !important; }
         #body_content_inner, #body_content_inner p, #body_content_inner td { color: #101820 !important; font-family: Helvetica, Arial, sans-serif !important; font-size: 15px !important; line-height: 1.65 !important; }
         a { color: #9b6b2f !important; font-weight: 700 !important; }
         .td, .text, address, table.td { border-color: #eadfcf !important; }
