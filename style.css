@@ -138,14 +138,20 @@ table.shop_table td, table.shop_table th { padding: 14px !important; border-colo
 }
 
 
-/* Refinamento KAJE: loja como catálogo de serviços, sem depender de imagens de produto. */
+/* Cards de serviço: exibir thumbnails públicos; o selo fica como apoio, não substituto da imagem. */
 .woocommerce ul.products li.product img {
-  display: none;
+  display: block !important;
+  width: 100% !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 0 0 16px !important;
+  background: var(--surface-2);
 }
 .woocommerce ul.products li.product .kaje-product-label {
   display: inline-flex;
   width: max-content;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   padding: 6px 12px;
   border-radius: 999px;
   background: rgba(201,150,74,.12);
