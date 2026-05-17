@@ -171,6 +171,327 @@ table.shop_table td, table.shop_table th { padding: 14px !important; border-colo
 }
 
 
+/* Checkout clássico WooCommerce + campos Brazilian Market */
+body.woocommerce-checkout .content-section {
+  padding-top: 42px;
+  padding-bottom: 88px;
+}
+body.woocommerce-checkout .content-section > .container,
+body.woocommerce-checkout .woocommerce {
+  width: min(calc(100% - 32px), 1180px);
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.woocommerce-checkout .woocommerce {
+  padding-bottom: 18px;
+}
+body.woocommerce-checkout .woocommerce-form-coupon-toggle {
+  margin: 0 0 22px;
+}
+body.woocommerce-checkout .woocommerce-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 16px 20px;
+  border: 1px solid rgba(201,150,74,.42);
+  border-top: 0;
+  border-left: 5px solid var(--primary);
+  border-radius: 18px;
+  background: rgba(255,250,241,.96);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+body.woocommerce-checkout .woocommerce-info::before {
+  color: var(--primary-dark);
+  top: auto;
+}
+body.woocommerce-checkout .woocommerce-info a {
+  color: var(--primary-dark);
+  font-weight: 900;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+body.woocommerce-checkout form.checkout.woocommerce-checkout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(340px, .82fr);
+  gap: 28px;
+  align-items: start;
+}
+body.woocommerce-checkout #customer_details,
+body.woocommerce-checkout #order_review {
+  min-width: 0;
+}
+body.woocommerce-checkout #customer_details {
+  display: grid;
+  gap: 22px;
+}
+body.woocommerce-checkout .woocommerce-billing-fields,
+body.woocommerce-checkout .woocommerce-additional-fields,
+body.woocommerce-checkout .woocommerce-checkout-review-order {
+  background: rgba(255,250,241,.98);
+  border: 1px solid rgba(231,210,170,.95);
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+body.woocommerce-checkout .woocommerce-billing-fields h3,
+body.woocommerce-checkout .woocommerce-additional-fields h3,
+body.woocommerce-checkout #order_review_heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+  color: var(--dark);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 900;
+  letter-spacing: -.035em;
+}
+body.woocommerce-checkout .woocommerce-billing-fields h3::before,
+body.woocommerce-checkout .woocommerce-additional-fields h3::before,
+body.woocommerce-checkout #order_review_heading::before {
+  content: '';
+  width: 10px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--primary);
+  box-shadow: 0 0 0 6px rgba(201,150,74,.14);
+}
+body.woocommerce-checkout #order_review_heading {
+  margin-top: 0;
+}
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 0;
+}
+body.woocommerce-checkout .woocommerce form .form-row,
+body.woocommerce-checkout .woocommerce-page form .form-row,
+body.woocommerce-checkout .woocommerce form .form-row-first,
+body.woocommerce-checkout .woocommerce form .form-row-last,
+body.woocommerce-checkout .woocommerce form .form-row-wide {
+  float: none !important;
+  width: 100% !important;
+  clear: none !important;
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  margin: 0 0 18px !important;
+}
+body.woocommerce-checkout .woocommerce form .form-row label {
+  display: block;
+  margin: 0 0 7px;
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 1.28;
+}
+body.woocommerce-checkout .woocommerce form .form-row .required {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+body.woocommerce-checkout .woocommerce form .form-row input.input-text,
+body.woocommerce-checkout .woocommerce form .form-row textarea,
+body.woocommerce-checkout .woocommerce form .form-row select {
+  width: 100%;
+  min-height: 54px;
+  padding: 13px 16px;
+  border: 1px solid rgba(201,150,74,.48);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.25;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.85);
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+body.woocommerce-checkout .woocommerce form .form-row textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+body.woocommerce-checkout .woocommerce form .form-row input.input-text:focus,
+body.woocommerce-checkout .woocommerce form .form-row textarea:focus,
+body.woocommerce-checkout .woocommerce form .form-row select:focus,
+body.woocommerce-checkout .select2-container--open .select2-selection--single {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 4px rgba(201,150,74,.16) !important;
+  outline: none !important;
+  background: #fff;
+}
+body.woocommerce-checkout #billing_country_field,
+body.woocommerce-checkout #billing_address_1_field,
+body.woocommerce-checkout #billing_address_2_field,
+body.woocommerce-checkout #billing_neighborhood_field,
+body.woocommerce-checkout #billing_company_field,
+body.woocommerce-checkout #billing_email_field {
+  grid-column: span 2;
+}
+body.woocommerce-checkout #billing_number_field,
+body.woocommerce-checkout #billing_postcode_field,
+body.woocommerce-checkout #billing_city_field,
+body.woocommerce-checkout #billing_state_field,
+body.woocommerce-checkout #billing_phone_field,
+body.woocommerce-checkout #billing_cellphone_field,
+body.woocommerce-checkout #billing_cpf_field,
+body.woocommerce-checkout #billing_cnpj_field,
+body.woocommerce-checkout #billing_persontype_field,
+body.woocommerce-checkout #billing_ie_field {
+  grid-column: span 1;
+}
+body.woocommerce-checkout .select2-container { width: 100% !important; }
+body.woocommerce-checkout .select2-container .select2-selection--single {
+  height: 54px !important;
+  border: 1px solid rgba(201,150,74,.48) !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+}
+body.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 54px !important;
+  padding-left: 16px !important;
+  padding-right: 42px !important;
+  color: var(--text) !important;
+  font-size: 16px !important;
+}
+body.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 54px !important;
+  right: 12px !important;
+}
+body.woocommerce-checkout .woocommerce-additional-fields {
+  margin-top: 0;
+}
+body.woocommerce-checkout #order_review_heading,
+body.woocommerce-checkout #order_review {
+  grid-column: 2;
+}
+body.woocommerce-checkout #order_review_heading {
+  position: sticky;
+  top: 112px;
+  z-index: 2;
+  padding: 24px 28px 0;
+  margin-bottom: -1px;
+  border: 1px solid rgba(231,210,170,.95);
+  border-bottom: 0;
+  border-radius: 28px 28px 0 0;
+  background: rgba(255,250,241,.98);
+  box-shadow: var(--shadow);
+}
+body.woocommerce-checkout .woocommerce-checkout-review-order {
+  position: sticky;
+  top: 182px;
+  border-radius: 0 0 28px 28px;
+  border-top: 0;
+}
+body.woocommerce-checkout table.shop_table {
+  margin: 0 0 22px;
+  border: 1px solid rgba(231,210,170,.95) !important;
+  border-radius: 18px;
+  overflow: hidden;
+}
+body.woocommerce-checkout table.shop_table th,
+body.woocommerce-checkout table.shop_table td {
+  font-size: 15px;
+  vertical-align: top;
+}
+body.woocommerce-checkout table.shop_table thead th,
+body.woocommerce-checkout table.shop_table tfoot th {
+  background: rgba(246,234,209,.82);
+  font-weight: 900;
+}
+body.woocommerce-checkout .woocommerce-checkout-payment {
+  background: #fff !important;
+  border: 1px solid rgba(231,210,170,.95);
+  border-radius: 20px;
+  padding: 18px;
+}
+body.woocommerce-checkout #payment ul.payment_methods {
+  border-bottom: 1px solid rgba(231,210,170,.95);
+  padding: 0 0 12px;
+}
+body.woocommerce-checkout #payment div.payment_box {
+  background: rgba(246,234,209,.72);
+  color: var(--text);
+  border-radius: 16px;
+}
+body.woocommerce-checkout #payment div.payment_box::before {
+  border-bottom-color: rgba(246,234,209,.72);
+}
+body.woocommerce-checkout .woocommerce-privacy-policy-text,
+body.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+body.woocommerce-checkout #place_order {
+  width: 100%;
+  min-height: 56px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  box-shadow: var(--shadow);
+}
+body.woocommerce-checkout #place_order:hover {
+  background: var(--primary-dark);
+}
+body.woocommerce-checkout .woocommerce-error,
+body.woocommerce-checkout .woocommerce-message {
+  width: min(calc(100% - 32px), 1180px);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 980px) {
+  body.woocommerce-checkout form.checkout.woocommerce-checkout {
+    grid-template-columns: 1fr;
+  }
+  body.woocommerce-checkout #order_review_heading,
+  body.woocommerce-checkout #order_review {
+    grid-column: auto;
+    position: static;
+  }
+  body.woocommerce-checkout #order_review_heading {
+    margin-bottom: -1px;
+  }
+}
+@media (max-width: 700px) {
+  body.woocommerce-checkout .content-section > .container,
+  body.woocommerce-checkout .woocommerce {
+    width: min(calc(100% - 24px), 1180px);
+  }
+  body.woocommerce-checkout .woocommerce-billing-fields,
+  body.woocommerce-checkout .woocommerce-additional-fields,
+  body.woocommerce-checkout .woocommerce-checkout-review-order,
+  body.woocommerce-checkout #order_review_heading {
+    padding: 22px;
+    border-radius: 20px;
+  }
+  body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper {
+    grid-template-columns: 1fr;
+  }
+  body.woocommerce-checkout #billing_country_field,
+  body.woocommerce-checkout #billing_address_1_field,
+  body.woocommerce-checkout #billing_address_2_field,
+  body.woocommerce-checkout #billing_neighborhood_field,
+  body.woocommerce-checkout #billing_company_field,
+  body.woocommerce-checkout #billing_email_field,
+  body.woocommerce-checkout #billing_number_field,
+  body.woocommerce-checkout #billing_postcode_field,
+  body.woocommerce-checkout #billing_city_field,
+  body.woocommerce-checkout #billing_state_field,
+  body.woocommerce-checkout #billing_phone_field,
+  body.woocommerce-checkout #billing_cellphone_field,
+  body.woocommerce-checkout #billing_cpf_field,
+  body.woocommerce-checkout #billing_cnpj_field,
+  body.woocommerce-checkout #billing_persontype_field,
+  body.woocommerce-checkout #billing_ie_field {
+    grid-column: auto;
+  }
+}
+
 /* Legal / terms content */
 .page-content .kaje-legal-content,
 .kaje-legal-content {
