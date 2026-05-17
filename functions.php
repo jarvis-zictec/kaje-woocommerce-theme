@@ -82,8 +82,12 @@ function kaje_loja_checkout_url() {
     return function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_url() : home_url( '/' );
 }
 
+function kaje_loja_account_url() {
+    return function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'myaccount' ) : home_url( '/minha-conta/' );
+}
+
 function kaje_loja_default_menu() {
-    echo '<ul class="menu"><li><a href="' . esc_url( kaje_loja_shop_url() ) . '">Serviços</a></li><li><a href="' . esc_url( kaje_loja_calendly_url() ) . '" target="_blank" rel="noopener">Agendamento</a></li><li><a href="https://www.kajeservicos.com.br/">Site institucional</a></li><li><a href="' . esc_url( kaje_loja_cart_url() ) . '">Carrinho</a></li></ul>';
+    echo '<ul class="menu"><li><a href="' . esc_url( kaje_loja_shop_url() ) . '">Serviços</a></li><li><a href="' . esc_url( kaje_loja_calendly_url() ) . '" target="_blank" rel="noopener">Agendamento</a></li><li><a href="https://www.kajeservicos.com.br/">Site institucional</a></li><li><a href="' . esc_url( kaje_loja_account_url() ) . '">Minha conta</a></li></ul>';
 }
 
 
